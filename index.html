@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Food Items</title>
+</head>
+<body>
+<h1>Food Items</h1>
+<ul>
+{# List all food items #}
+{% for foodname in listAllfoodnames(data) %}
+<li>{{ foodname }}</li>
+{% endfor %}
+
+{# List all food items with category vegetables #}
+{% for foodItem in listFoodItemsByCategory(data, "vegetables") %}
+<li>{{ foodItem }}</li>
+{% endfor %}
+
+{# List all food items with category fruit #}
+{% for foodItem in listFoodItemsByCategory(data, "fruit") %}
+<li>{{ foodItem }}</li>
+{% endfor %}
+
+{# List all food items with calorie above 100 #}
+{% for foodItem in listFoodItemsWithCalorieAbove(data, 100) %}
+<li>{{ foodItem }}</li>
+{% endfor %}
+
+{# List all food items with calorie below 100 #}
+{% for foodItem in listFoodItemsWithCalorieBelow(data, 100) %}
+<li>{{ foodItem }}</li>
+{% endfor %}
+
+{# List all food items sorted by protein content, from highest to lowest #}
+{% for foodItem in listFoodItemsByProtein(data) %}
+<li>{{ foodItem }}</li>
+{% endfor %}
+
+{# List all food items sorted by carbohydrate content, from lowest to highest #}
+{% for foodItem in listFoodItemsByCarbohydrate(data) %}
+<li>{{ foodItem }}</li>
+{% endfor %}
+</ul>
+</body>
+</html>
