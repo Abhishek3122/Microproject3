@@ -1,45 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Food Items</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>Food Items</h1>
-<ul>
-{# List all food items #}
-{% for foodname in listAllfoodnames(data) %}
-<li>{{ foodname }}</li>
-{% endfor %}
-
-{# List all food items with category vegetables #}
-{% for foodItem in listFoodItemsByCategory(data, "vegetables") %}
-<li>{{ foodItem }}</li>
-{% endfor %}
-
-{# List all food items with category fruit #}
-{% for foodItem in listFoodItemsByCategory(data, "fruit") %}
-<li>{{ foodItem }}</li>
-{% endfor %}
-
-{# List all food items with calorie above 100 #}
-{% for foodItem in listFoodItemsWithCalorieAbove(data, 100) %}
-<li>{{ foodItem }}</li>
-{% endfor %}
-
-{# List all food items with calorie below 100 #}
-{% for foodItem in listFoodItemsWithCalorieBelow(data, 100) %}
-<li>{{ foodItem }}</li>
-{% endfor %}
-
-{# List all food items sorted by protein content, from highest to lowest #}
-{% for foodItem in listFoodItemsByProtein(data) %}
-<li>{{ foodItem }}</li>
-{% endfor %}
-
-{# List all food items sorted by carbohydrate content, from lowest to highest #}
-{% for foodItem in listFoodItemsByCarbohydrate(data) %}
-<li>{{ foodItem }}</li>
-{% endfor %}
-</ul>
+    <nav class="nav">
+<h1>  &#x1F34E;Food Chart&#x1F34C;</h1><br><br>
+    </nav>
+    <br><br><br>
+        <div class="container">
+            <div class="item-0" id="1">BLOCK 1</div>
+            <div class="item-1" id="2">BLOCK 2</div>
+            <div class="item-2" id="3">BLOCK 3</div>
+            <div class="item-3" id="4">BLOCK 4</div>
+            <div class="item-4" id="5">BLOCK 5</div> 
+            <div class="item-5" id="6">BLOCK 6</div> 
+            <div class="item-6" id="7">BLOCK 7</div> 
+            <div class="item-7" id="8">BLOCK 8</div> 
+            <div class="item-8" id="9">BLOCK 9</div> 
+            <div class="item-9" id="10">BLOCK 10</div>  
+            <div class="item-10" id="11">BLOCK 11</div>  
+        </div>
+        <script src="script.js"></script> 
+    <footer>
+         
+    </footer>
 </body>
 </html>
